@@ -10,9 +10,12 @@ const Personal = (props) => {
         })
         .map((item, idx) => {
           return (
-            <p key={idx}>
-              {item.minutes} - {item.description}
-            </p>
+            <div key={idx}>
+              <div>{props.personal.totalMinutes}</div>
+              <p>
+                {item.minutes} - {item.description}
+              </p>
+            </div>
           )
         })}
     </div>

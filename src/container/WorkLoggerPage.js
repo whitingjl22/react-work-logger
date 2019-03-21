@@ -39,9 +39,11 @@ class WorkLoggerPage extends Component {
     }
     if (this.state.project === "Personal") {
       this.state.personal.array.push(object)
+      this.state.personal.totalMinutes += parseInt(object.minutes)
       this.setState({ personal: this.state.personal })
     } else {
       this.state.work.array.push(object)
+      this.state.work.totalMinutes += parseInt(object.minutes)
       this.setState({ work: this.state.work })
     }
   }
