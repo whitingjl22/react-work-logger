@@ -3,7 +3,7 @@ import React from "react"
 const Personal = (props) => {
   return (
     <div>
-      <h1>Personal</h1>
+      <h1>Personal {props.personal.totalMinutes}</h1>
       {props.personal.array
         .sort((a, b) => {
           return b.minutes - a.minutes
@@ -11,7 +11,6 @@ const Personal = (props) => {
         .map((item, idx) => {
           return (
             <div key={idx}>
-              <div>{props.personal.totalMinutes}</div>
               <p>
                 {item.minutes} - {item.description}
               </p>
