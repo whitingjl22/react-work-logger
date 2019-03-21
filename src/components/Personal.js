@@ -4,13 +4,17 @@ const Personal = (props) => {
   return (
     <div>
       <h1>Personal</h1>
-      {props.personal.array.map((item, idx) => {
-        return (
-          <p key={idx}>
-            {item.minutes} - {item.description}
-          </p>
-        )
-      })}
+      {props.personal.array
+        .sort((a, b) => {
+          return b.minutes - a.minutes
+        })
+        .map((item, idx) => {
+          return (
+            <p key={idx}>
+              {item.minutes} - {item.description}
+            </p>
+          )
+        })}
     </div>
   )
 }

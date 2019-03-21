@@ -10,8 +10,8 @@ class WorkLoggerPage extends Component {
       descriptionValid: false,
       minutes: "",
       minutesValid: false,
-      personal: { array: [], minutes: 0 },
-      work: { array: [], minutes: 0 },
+      personal: { array: [], totalMinutes: 0 },
+      work: { array: [], totalMinutes: 0 },
       project: "Personal"
     }
   }
